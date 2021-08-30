@@ -1,6 +1,13 @@
 <a href="https://107-systems.org/"><img align="right" src="https://raw.githubusercontent.com/107-systems/.github/main/logo/107-systems.png" width="15%"></a>
 `107-Arduino-Sensor`
 ====================
+[![Arduino Library Badge](https://www.ardu-badge.com/badge/107-Arduino-Sensor.svg?)](https://www.ardu-badge.com/107-Arduino-Sensor)
+[![Compile Examples](https://github.com/107-systems/107-Arduino-Sensor/workflows/Compile%20Examples/badge.svg)](https://github.com/107-systems/107-Arduino-Sensor/actions?workflow=Compile+Examples)
+[![Arduino Lint](https://github.com/107-systems/107-Arduino-Sensor/workflows/Arduino%20Lint/badge.svg)](https://github.com/107-systems/107-Arduino-Sensor/actions?workflow=Arduino+Lint)
+[![keywords.txt Checks](https://github.com/107-systems/107-Arduino-Sensor/workflows/Extra%20Library%20Checks/badge.svg)](https://github.com/107-systems/107-Arduino-Sensor/actions?workflow=Extra+Library+Checks)
+[![General Formatting Checks](https://github.com/107-systems/107-Arduino-Sensor/workflows/General%20Formatting%20Checks/badge.svg)](https://github.com/107-systems/107-Arduino-Sensor/actions?workflow=General+Formatting+Checks)
+[![Spell Check](https://github.com/107-systems/107-Arduino-Sensor/workflows/Spell%20Check/badge.svg)](https://github.com/107-systems/107-Arduino-Sensor/actions?workflow=Spell+Check)
+
 <p align="center">
   <a href="https://github.com/107-systems/107-Arduino-DroneCore"><img src="https://github.com/107-systems/.github/raw/main/logo/viper.jpg" width="40%"></a>
 </p>
