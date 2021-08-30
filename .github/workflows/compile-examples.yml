@@ -21,6 +21,7 @@ jobs:
       LIBRARIES: |
         # Install the library from the local path.
         - source-path: ./
+        - source-url: https://github.com/107-systems/107-Arduino-BoostUnits.git
 
     strategy:
       fail-fast: false
