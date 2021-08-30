@@ -70,10 +70,6 @@ jobs:
           - fqbn: arduino:mbed_edge:edge_control
             platforms: |
               - name: arduino:mbed_edge
-          - fqbn: esp32:esp32:esp32
-            platforms: |
-              - name: esp32:esp32
-                source-url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
           - fqbn: rp2040:rp2040:rpipico
             platforms: |
               - name: rp2040:rp2040
