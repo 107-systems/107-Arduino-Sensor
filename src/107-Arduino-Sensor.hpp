@@ -5,8 +5,8 @@
  * Contributors: https://github.com/107-systems/107-Arduino-Sensor/graphs/contributors.
  */
 
-#ifndef ARDUINO_SENSOR_HPP_
-#define ARDUINO_SENSOR_HPP_
+#ifndef _107_ARDUINO_SENSOR_HPP_
+#define _107_ARDUINO_SENSOR_HPP_
 
 /**************************************************************************************
  * INCLUDE
@@ -115,4 +115,4 @@ typedef ArduinoSensorBase<unit::Pressure> PressureSensorBase;
 
 } /* drone */
 
-#endif /* ARDUINO_SENSOR_HPP_ */
+#endif /* _107_ARDUINO_SENSOR_HPP_ */
