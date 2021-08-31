@@ -21,7 +21,7 @@ This library works for
 
 ## Example
 ```C++
-#include <ArduinoSensor.hpp>
+#include <107-Arduino-Sensor.hpp>
 /* ... */
 class DummyPressureSensor : public drone::PressureSensorBase
 {
