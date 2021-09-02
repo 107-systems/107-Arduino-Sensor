@@ -31,7 +31,7 @@ namespace drone
  **************************************************************************************/
 
 template<typename T>
-class ArduinoSensorBase : public Printable
+class ArduinoSensorBase : public virtual Printable
 {
 
 public:
