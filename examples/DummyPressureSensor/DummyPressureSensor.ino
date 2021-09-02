@@ -34,7 +34,7 @@ public:
   virtual ~DummyPressureSensor() { }
 
 
-  virtual drone::unit::Pressure get() const override { return drone::unit::Pressure(1023.0 * drone::unit::pascal); }
+  virtual void get(drone::unit::Pressure & val) const override { val = drone::unit::Pressure(1023.0 * drone::unit::pascal); }
 
   void onExternalEvent()
   {
@@ -62,8 +62,9 @@ void setup()
 
   Serial.println(pressure_sensor);
 
+  drone::unit::Pressure pressure_val = 0.0 * drone::unit::pascal;
   Serial.print("[SYNC] p = ");
-  Serial.print(pressure_sensor.get().value());
+  Serial.print(pressure_val.value());
   Serial.println(" Pascal");
   Serial.println();
 
