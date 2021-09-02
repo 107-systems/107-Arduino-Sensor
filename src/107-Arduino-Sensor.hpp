@@ -17,7 +17,7 @@
 
 #include <107-Arduino-BoostUnits.h>
 
-#include <Printable.h>
+#include <Arduino.h>
 
 /**************************************************************************************
  * NAMESPACE
@@ -31,7 +31,7 @@ namespace drone
  **************************************************************************************/
 
 template<typename T>
-class ArduinoSensorBase : public arduino::Printable
+class ArduinoSensorBase : public Printable
 {
 
 public:
@@ -61,7 +61,7 @@ public:
   inline unit::Frequency updateRate() const { return _update_rate; }
 
 
-  virtual T get() const = 0;
+  virtual void get(T & val) const = 0;
 
 
   virtual size_t printTo(Print & p) const override
@@ -108,6 +108,7 @@ private:
 
 typedef ArduinoSensorBase<unit::Length> LengthSensorBase;
 typedef ArduinoSensorBase<unit::Pressure> PressureSensorBase;
+typedef ArduinoSensorBase<unit::Temperature> TemperatureSensorBase;
 
 /**************************************************************************************
  * NAMESPACE
