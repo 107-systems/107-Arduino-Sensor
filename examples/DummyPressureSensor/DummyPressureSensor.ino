@@ -22,7 +22,6 @@ public:
   : drone::PressureSensorBase("BMP388",
                               0.0    * drone::unit::pascal,
                               1000.0 * drone::unit::pascal,
-                              1.0    * drone::unit::pascal,
                               25.0   * drone::unit::hertz,
                               [](drone::unit::Pressure const pressure)
                               {
