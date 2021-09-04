@@ -41,13 +41,11 @@ public:
   ArduinoSensorBase(std::string const & name,
                     T const & max_value,
                     T const & min_value,
-                    T const & resolution,
                     unit::Frequency const update_rate,
                     OnSensorValueUpdateFunc on_sensor_value_update)
   : _name{name}
   , _max_value{max_value}
   , _min_value{min_value}
-  , _resolution{resolution}
   , _update_rate{update_rate}
   , _on_sensor_value_update{on_sensor_value_update}
   { }
@@ -57,7 +55,6 @@ public:
   inline std::string     name      () const { return _name; }
   inline T               maxValue  () const { return _max_value; }
   inline T               minValue  () const { return _min_value; }
-  inline T               resolution() const { return _resolution; }
   inline unit::Frequency updateRate() const { return _update_rate; }
 
 
@@ -73,8 +70,6 @@ public:
     n += p.println(_max_value.value());
     n += p.print("Min Value   = ");
     n += p.println(_min_value.value());
-    n += p.print("Resolution  = ");
-    n += p.println(_resolution.value());
     n += p.print("Update Rate = ");
     n += p.println(_update_rate.value());
     return n;
@@ -84,7 +79,6 @@ protected:
 
   inline void setMaxValue  (T const v)                { _max_value = v; }
   inline void setMinValue  (T const v)                { _min_value = v; }
-  inline void setResolution(T const v)                { _resolution = v; }
   inline void setUpdateRate(unit::Frequency const ur) { _update_rate = ur; }
 
   void onSensorValueUpdate(T const v)
@@ -96,7 +90,7 @@ protected:
 private:
 
   std::string const _name;
-  T _max_value, _min_value, _resolution;
+  T _max_value, _min_value;
   unit::Frequency _update_rate;
   OnSensorValueUpdateFunc _on_sensor_value_update;
 
