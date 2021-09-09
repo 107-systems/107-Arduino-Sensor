@@ -20,6 +20,22 @@
 #include <Arduino.h>
 
 /**************************************************************************************
+ * DEFINE
+ **************************************************************************************/
+
+#define _107_ARDUINO_SENSOR_BASE_MAJOR 0001
+#define _107_ARDUINO_SENSOR_BASE_MINOR 0000
+#define _107_ARDUINO_SENSOR_BASE_PATCH 0004
+
+#define _107_ARDUINO_SENSOR_BASE_CONCAT_VERSION_(a,b,c) a ## b ## c
+#define _107_ARDUINO_SENSOR_BASE_CONCAT_VERSION(a,b,c) _107_ARDUINO_SENSOR_BASE_CONCAT_VERSION_(a,b,c)
+
+#define _107_ARDUINO_SENSOR_BASE_VERSION \
+        _107_ARDUINO_SENSOR_BASE_CONCAT_VERSION(_107_ARDUINO_SENSOR_BASE_MAJOR, \
+                                                _107_ARDUINO_SENSOR_BASE_MINOR, \
+                                                _107_ARDUINO_SENSOR_BASE_PATCH)
+
+/**************************************************************************************
  * NAMESPACE
  **************************************************************************************/
 
@@ -35,6 +51,11 @@ class ArduinoSensorBase : public virtual Printable
 {
 
 public:
+
+  static size_t constexpr MAJOR = _107_ARDUINO_SENSOR_BASE_MAJOR;
+  static size_t constexpr MINOR = _107_ARDUINO_SENSOR_BASE_MINOR;
+  static size_t constexpr PATCH = _107_ARDUINO_SENSOR_BASE_PATCH;
+
 
   typedef std::function<void(T const)> OnSensorValueUpdateFunc;
 
@@ -64,6 +85,12 @@ public:
   virtual size_t printTo(Print & p) const override
   {
     size_t n = 0;
+    n += p.print("API Version = v");
+    n += p.print(MAJOR);
+    n += p.print(".");
+    n += p.print(MINOR);
+    n += p.print(".");
+    n += p.println(PATCH);
     n += p.print("Name        = ");
     n += p.println(_name.c_str());
     n += p.print("Max Value   = ");
