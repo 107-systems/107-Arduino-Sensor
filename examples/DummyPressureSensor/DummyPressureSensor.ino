@@ -33,7 +33,7 @@ public:
   virtual ~DummyPressureSensor() { }
 
 
-  virtual void get(drone::unit::Pressure & val) const override { val = drone::unit::Pressure(1023.0 * drone::unit::pascal); }
+  virtual void get(drone::unit::Pressure & val) override { val = drone::unit::Pressure(1023.0 * drone::unit::pascal); }
 
   void onExternalEvent()
   {

@@ -58,7 +58,7 @@ public:
   inline unit::Frequency updateRate() const { return _update_rate; }
 
 
-  virtual void get(T & val) const = 0;
+  virtual void get(T & val) = 0;
 
 
   virtual size_t printTo(Print & p) const override
